@@ -1,0 +1,62 @@
+# ==========================================
+# 1. AMBIENTE VIRTUAL E PYTHON (uv / pip)
+# ==========================================
+.venv/
+venv/
+ENV/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ==========================================
+# 2. DADOS DO PIPELINE (Medallion Layers)
+# ==========================================
+# Mantém a estrutura de pastas no Git (via .gitkeep), mas ignora os dados gerados
+data/bronze/*
+data/silver/*
+data/gold/*
+
+# Descomente a linha abaixo se os CSVs brutos em data/raw forem confidenciais
+# data/raw/*
+
+# Ignorar extensões de dados locais
+*.parquet
+*.db
+*.duckdb
+*.sqlite
+*.csv
+*.xlsx
+
+# Exceção para manter o .gitkeep se houver nas pastas data/
+!data/**/.gitkeep
+
+# ==========================================
+# 3. SEGURANÇA & SEGREDOS (Solana & Envs)
+# ==========================================
+.env
+.env.local
+*.json
+!package.json
+!tsconfig.json
+
+# Chaves privadas da Solana e carteiras Locais/Devnet
+*keypair*.json
+id.json
+wallet.json
+*.pem
+
+# ==========================================
+# 4. FERRAMENTAS E EDITOR DE CÓDIGO (VS Code)
+# ==========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ==========================================
+# 5. TESTES & COBERTURA (Pytest)
+# ==========================================
+.pytest_cache/
+.coverage
+htmlcov/

@@ -1,0 +1,23 @@
+# --- Processamento de Dados & Banco Analítico ---
+duckdb>=1.0.0
+polars>=1.0.0
+pandas>=2.2.0
+pyarrow>=16.0.0
+
+# --- Validação de Dados ---
+pydantic>=2.7.0
+
+# --- Visualização / Interface de Teste ---
+streamlit>=1.35.0
+
+# --- API Backend ---
+fastapi>=0.111.0
+uvicorn>=0.30.0
+
+# --- Integração Solana (Ancoragem / Devnet) ---
+solana>=0.34.0
+solders>=0.21.0
+
+# --- Qualidade, Testes & Utilitários ---
+pytest>=8.2.0
+python-dotenv>=1.0.1
